@@ -1,0 +1,271 @@
+---
+---
+<section id="patrocinadores" class="sponsors">
+  <div class="container">
+    <div class="sponsors-header fade-in">
+      <p class="section-label">Aliados del evento</p>
+      <h2 class="section-title">Con el apoyo de</h2>
+      <p class="sponsors-sub">
+        Gracias a nuestros partners que hacen posible Sky-Root La Paz 2026
+      </p>
+    </div>
+
+    <!-- Primary sponsor: HTB -->
+    <div class="sponsor-primary fade-in">
+      <div class="sponsor-primary-inner">
+        <div class="powered-label">Powered by</div>
+        <img
+          src="/htb-logo.png"
+          alt="Hack The Box"
+          class="htb-logo-full"
+          width="220"
+          height="auto"
+          loading="lazy"
+        />
+      </div>
+      <p class="sponsor-desc">
+        Plataforma líder mundial de ciberseguridad y hacking ético.
+        El evento corre sobre la infraestructura oficial de Hack The Box.
+      </p>
+    </div>
+
+    <!-- Secondary sponsors -->
+    <div class="sponsors-row fade-in" style="transition-delay: 0.1s">
+      <!-- UCB -->
+      <div class="sponsor-card">
+        <div class="sponsor-logo-wrap sponsor-logo-ucb">
+          <img
+            src="/ucb-logo.png"
+            alt="Universidad Católica Boliviana"
+            width="160"
+            height="auto"
+            loading="lazy"
+            class="sponsor-img"
+          />
+        </div>
+        <div class="sponsor-info">
+          <strong>Universidad Católica Boliviana</strong>
+          <span>Sede del evento · La Paz, Bolivia</span>
+        </div>
+      </div>
+
+      <!-- IQ Seguridad -->
+      <div class="sponsor-card">
+        <div class="sponsor-logo-wrap sponsor-logo-iq">
+          <img
+            src="/iq-seguridad.jpeg"
+            alt="IQ Seguridad"
+            width="160"
+            height="auto"
+            loading="lazy"
+            class="sponsor-img"
+          />
+        </div>
+        <div class="sponsor-info">
+          <strong>IQ Seguridad</strong>
+          <span>Partner de ciberseguridad</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community badge -->
+    <div class="community-badge fade-in" style="transition-delay: 0.2s">
+      <div class="community-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div>
+        <strong>Comunidad HTB La Paz, Bolivia</strong>
+        <p>Organizado por los Embajadores de Hack The Box en La Paz para impulsar la ciberseguridad en Bolivia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sponsors {
+    padding: 6rem 0;
+    position: relative;
+  }
+
+  .sponsors::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(159,239,0,0.25), transparent);
+  }
+
+  .sponsors-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .sponsors-header .section-label {
+    justify-content: center;
+  }
+
+  .sponsors-header .section-label::before { display: none; }
+  .sponsors-header .section-label::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--green);
+  }
+
+  .sponsors-sub {
+    margin-top: 0.6rem;
+    color: var(--grey-dim);
+    font-size: 0.9rem;
+  }
+
+  /* Primary sponsor HTB */
+  .sponsor-primary {
+    background: var(--black-card);
+    border: 1px solid rgba(159,239,0,0.2);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .sponsor-primary-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  .powered-label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grey-dim);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .htb-logo-full {
+    height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    object-fit: contain;
+  }
+
+  .sponsor-desc {
+    color: var(--grey);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  /* Secondary sponsors */
+  .sponsors-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .sponsor-card {
+    background: var(--black-card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .sponsor-card:hover {
+    border-color: rgba(159,239,0,0.18);
+    transform: translateY(-3px);
+  }
+
+  .sponsor-logo-wrap {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .sponsor-logo-ucb .sponsor-img {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(1.1);
+  }
+
+  .sponsor-logo-iq .sponsor-img {
+    max-height: 65px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .sponsor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .sponsor-info strong {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .sponsor-info span {
+    font-size: 0.8rem;
+    color: var(--grey-dim);
+  }
+
+  /* Community badge */
+  .community-badge {
+    background: var(--green-dim);
+    border: 1px solid rgba(159,239,0,0.2);
+    border-radius: var(--radius);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .community-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    background: rgba(159,239,0,0.1);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    margin-top: 2px;
+  }
+
+  .community-badge strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--green);
+    margin-bottom: 0.3rem;
+  }
+
+  .community-badge p {
+    font-size: 0.85rem;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 700px) {
+    .sponsor-primary { flex-direction: column; gap: 1.5rem; }
+    .sponsors-row { grid-template-columns: 1fr; }
+  }
+</style>

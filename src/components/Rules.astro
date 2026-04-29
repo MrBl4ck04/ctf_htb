@@ -1,0 +1,270 @@
+---
+const rules = [
+  {
+    num: '01',
+    title: 'Requisitos de Participación',
+    items: [
+      'Ser estudiante universitario vigente — se solicitará credencial o comprobante.',
+      'Contar con una computadora portátil propia con capacidad de conexión Wi-Fi.',
+      'Tener una cuenta activa en la plataforma Hack The Box.',
+    ],
+  },
+  {
+    num: '02',
+    title: 'Modalidad y Equipos',
+    items: [
+      'Participación individual o en equipos de hasta 3 personas.',
+      'Quienes no tengan equipo al inscribirse podrán registrarse solos; la organización intentará facilitar la formación de grupos antes del evento (sujeto a disponibilidad).',
+      'Una vez iniciado el evento, queda prohibida la formación de nuevos equipos o la colaboración externa.',
+    ],
+  },
+  {
+    num: '03',
+    title: 'Dinámica del Evento',
+    items: [
+      'El objetivo es encontrar 5 "flags" (cadenas de texto específicas) ocultas en la arquitectura del evento.',
+      'Cada flag tiene un puntaje asignado según su dificultad.',
+      'En caso de empate en puntos, el ganador será quien haya alcanzado el puntaje en el menor tiempo registrado.',
+    ],
+  },
+  {
+    num: '04',
+    title: 'Código de Ética y Fair Play',
+    items: [
+      'Prohibido el sabotaje: no se permite atacar la infraestructura del evento ni los equipos de otros participantes.',
+      'Prohibido compartir flags o colaborar con otros competidores — resultará en descalificación inmediata.',
+      'Se permite cualquier herramienta de código abierto o legalmente licenciada. No se permiten herramientas que generen DoS.',
+      'No está permitido anunciar en voz alta "ya tengo todas las flags" o similar — puede generar desaliento y considerarse sabotaje.',
+      'Mantener un ambiente profesional y cordial con todos los participantes, Crew y Embajadores.',
+    ],
+  },
+  {
+    num: '05',
+    title: 'Infraestructura y Conectividad',
+    items: [
+      'Se proporcionará acceso a Internet para la conexión a la plataforma de HTB.',
+      'El uso de la red está limitado estrictamente a actividades relacionadas con la competencia.',
+      'Cualquier intento de escaneo de red fuera del alcance del laboratorio de HTB será motivo de expulsión.',
+    ],
+  },
+  {
+    num: '06',
+    title: 'Premiación',
+    items: [
+      'Solo participantes que hayan completado el proceso de registro y pago de inscripción son elegibles.',
+      'Todos los participantes que completen correctamente todos los retos pueden ser elegibles para premios.',
+      'Los premios se dividen equitativamente entre todos los integrantes registrados del equipo ganador.',
+    ],
+  },
+  {
+    num: '07',
+    title: 'Código de Conducta Universitaria',
+    items: [
+      'Respeto mutuo: trato cordial con todos los participantes, organizadores y personal de la universidad.',
+      'Cuidado del entorno: cualquier daño a instalaciones o mobiliario es responsabilidad del participante.',
+      'Prohibición total de bebidas alcohólicas, tabaco y cualquier sustancia controlada en el campus.',
+      'Ambiente de trabajo: mantener nivel de ruido bajo para no interferir con la concentración ajena.',
+      'Cada participante es responsable de su propia infraestructura técnica (laptop, cargadores, adaptadores).',
+    ],
+  },
+  {
+    num: '08',
+    title: 'Sanciones',
+    items: [
+      'Las sanciones son evaluadas por los Embajadores del evento.',
+      'Pueden ir desde una llamada de atención hasta la descalificación.',
+      'Varias llamadas de atención pueden causar la descalificación.',
+      'La decisión de los Embajadores de HTB es inapelable.',
+    ],
+  },
+  {
+    num: '09',
+    title: 'Consentimiento de Datos',
+    items: [
+      'Al participar, el estudiante acepta que su nombre y perfil técnico puedan ser compartidos con empresas auspiciadoras para fines de reclutamiento y visibilidad de talento.',
+    ],
+  },
+];
+---
+
+<section id="reglas" class="rules">
+  <div class="container">
+    <div class="rules-header fade-in">
+      <p class="section-label">Reglamento Oficial</p>
+      <h2 class="section-title">
+        Reglas de <span class="green-text">Competencia</span>
+      </h2>
+      <p class="rules-intro">
+        Sky-Root La Paz 2026 — CTF 12 Horas · UCB La Paz, Bolivia<br />
+        Lea atentamente el reglamento antes de inscribirse.
+      </p>
+    </div>
+
+    <div class="rules-grid">
+      {rules.map((rule, i) => (
+        <div class="rule-card fade-in" style={`transition-delay: ${i * 0.05}s`}>
+          <div class="rule-card-header">
+            <span class="rule-num" aria-hidden="true">{rule.num}</span>
+            <h3 class="rule-title">{rule.title}</h3>
+          </div>
+          <ul class="rule-list">
+            {rule.items.map(item => (
+              <li class="rule-item">
+                <span class="rule-bullet" aria-hidden="true">›</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="rules-tagline fade-in">
+      <span class="tagline-quote">"</span>
+      <span>Hacking for a safer world.</span>
+      <span class="tagline-quote">"</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .rules {
+    padding: 6rem 0;
+    position: relative;
+  }
+
+  .rules::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(164,177,205,0.1), transparent);
+  }
+
+  .rules-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .rules-header .section-label {
+    justify-content: center;
+  }
+
+  .rules-header .section-label::before { display: none; }
+  .rules-header .section-label::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--green);
+  }
+
+  .green-text {
+    color: var(--green);
+    text-shadow: 0 0 20px rgba(159,239,0,0.3);
+  }
+
+  .rules-intro {
+    margin-top: 0.75rem;
+    color: var(--grey-dim);
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .rule-card {
+    background: var(--black-card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius);
+    padding: 1.6rem;
+    transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+  }
+
+  .rule-card:hover {
+    border-color: rgba(159,239,0,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  }
+
+  .rule-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .rule-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--green);
+    background: var(--green-dim);
+    border: 1px solid rgba(159,239,0,0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+
+  .rule-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+  }
+
+  .rule-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .rule-item {
+    display: flex;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--grey);
+    line-height: 1.55;
+  }
+
+  .rule-bullet {
+    color: var(--green);
+    font-size: 1rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+
+  .rules-tagline {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(164,177,205,0.4);
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .tagline-quote {
+    color: var(--green);
+    font-size: 2em;
+    line-height: 0.5;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 600px) {
+    .rules-grid { grid-template-columns: 1fr; }
+  }
+</style>

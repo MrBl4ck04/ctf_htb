@@ -1,0 +1,210 @@
+---
+---
+<footer class="footer">
+  <div class="footer-top-line" aria-hidden="true"></div>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logos">
+        <img src="/event-logo.png" alt="Sky-Root CTF Logo" width="44" height="44" class="footer-event-logo" loading="lazy" />
+        <div class="footer-divider" aria-hidden="true"></div>
+        <img src="/htb-logo.png" alt="Hack The Box" width="120" height="auto" class="footer-htb-logo" loading="lazy" />
+      </div>
+      <p class="footer-tagline">"Hacking for a safer world."</p>
+      <p class="footer-community">Comunidad Hack The Box La Paz, Bolivia</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Navegación del footer">
+      <div class="footer-nav-col">
+        <span class="footer-nav-heading">Evento</span>
+        <a href="#inicio" class="footer-link">Inicio</a>
+        <a href="#sobre" class="footer-link">Sobre el CTF</a>
+        <a href="#inscripcion" class="footer-link">Inscripción</a>
+      </div>
+      <div class="footer-nav-col">
+        <span class="footer-nav-heading">Info</span>
+        <a href="#reglas" class="footer-link">Reglamento</a>
+        <a href="#patrocinadores" class="footer-link">Patrocinadores</a>
+      </div>
+    </nav>
+
+    <div class="footer-event-info">
+      <div class="footer-info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        29 de Mayo, 2026
+      </div>
+      <div class="footer-info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        UCB La Paz, Bolivia
+      </div>
+      <div class="footer-info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Registro: 7:30 AM · Inicio: 9:00 AM
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="footer-copy">
+        © 2026 Sky-Root La Paz · Comunidad HTB La Paz, Bolivia
+      </p>
+      <div class="footer-powered">
+        <span>Powered by</span>
+        <img src="/htb-logo.png" alt="Hack The Box" width="80" height="auto" class="footer-powered-logo" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--black-card);
+    margin-top: 0;
+    position: relative;
+  }
+
+  .footer-top-line {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(159,239,0,0.3), transparent);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 3rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+    align-items: start;
+  }
+
+  /* Brand */
+  .footer-brand { display: flex; flex-direction: column; gap: 0.8rem; }
+
+  .footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-event-logo {
+    border-radius: 50%;
+    filter: drop-shadow(0 0 8px rgba(159,239,0,0.3));
+    object-fit: cover;
+  }
+
+  .footer-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(164,177,205,0.2);
+  }
+
+  .footer-htb-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    height: 22px;
+    width: auto;
+  }
+
+  .footer-tagline {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--grey);
+  }
+
+  .footer-community {
+    font-size: 0.78rem;
+    color: rgba(164,177,205,0.4);
+    letter-spacing: 0.02em;
+  }
+
+  /* Navigation */
+  .footer-nav {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .footer-nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-nav-heading {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.2rem;
+  }
+
+  .footer-link {
+    font-size: 0.85rem;
+    color: var(--grey-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.01em;
+  }
+
+  .footer-link:hover { color: var(--white); }
+
+  /* Event info */
+  .footer-event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .footer-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: rgba(164,177,205,0.5);
+  }
+
+  /* Bottom bar */
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .footer-bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: rgba(164,177,205,0.35);
+  }
+
+  .footer-powered {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: rgba(164,177,205,0.35);
+  }
+
+  .footer-powered-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.35;
+    height: 16px;
+    width: auto;
+  }
+
+  @media (max-width: 900px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .footer-nav { gap: 2rem; }
+  }
+
+  @media (max-width: 500px) {
+    .footer-bottom-inner { flex-direction: column; gap: 0.8rem; text-align: center; }
+  }
+</style>
