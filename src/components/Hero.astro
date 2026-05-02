@@ -429,4 +429,28 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
   }
+
+  /* Mobile responsiveness for countdown */
+  @media (max-width: 500px) {
+    .countdown {
+      gap: 0.2rem;
+    }
+    .cd-box {
+      padding: 0.6rem 0.5rem;
+    }
+    .cd-num {
+      font-size: clamp(1.8rem, 7vw, 2.8rem);
+      min-width: 1.5ch;
+    }
+    .cd-colon {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      margin-top: 0.6rem;
+      margin-left: 0.1rem;
+      margin-right: 0.1rem;
+    }
+    .cd-label {
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+    }
+  }
 </style>

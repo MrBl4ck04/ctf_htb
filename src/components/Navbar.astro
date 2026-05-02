@@ -22,6 +22,8 @@
     </button>
   </div>
 
+</header>
+
   <div class="nav-mobile" id="mobile-menu" role="dialog" aria-label="Menú de navegación">
     <a href="#inicio" class="nav-mobile-link">Inicio</a>
     <a href="#sobre" class="nav-mobile-link">Evento</a>
@@ -29,7 +31,6 @@
     <a href="#patrocinadores" class="nav-mobile-link">Sponsors</a>
     <a href="#inscripcion" class="nav-mobile-cta">INSCRÍBETE</a>
   </div>
-</header>
 
 <script>
   const navbar = document.getElementById('navbar')!;
@@ -91,6 +92,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    position: relative;
+    z-index: 10;
   }
 
   .nav-brand {
@@ -172,28 +175,36 @@
 
   .nav-hamburger {
     display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
+    width: 48px;
+    height: 48px;
+    background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0.4rem;
-    flex-shrink: 0;
+    position: relative;
+    padding: 0;
+    margin-right: -0.5rem;
+    z-index: 20;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .nav-hamburger span {
     display: block;
-    width: 22px;
-    height: 2px;
+    width: 26px;
+    height: 3px;
     background: var(--white);
-    border-radius: 1px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: center;
+    border-radius: 2px;
+    position: absolute;
+    left: 11px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
   }
 
-  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-hamburger span:nth-child(1) { top: 15px; }
+  .nav-hamburger span:nth-child(2) { top: 23px; }
+  .nav-hamburger span:nth-child(3) { top: 31px; }
+
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   .nav-mobile {
     display: none;
@@ -246,7 +257,7 @@
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .nav-cta { display: none; }
-    .nav-hamburger { display: flex; }
+    .nav-hamburger { display: block; }
     .nav-mobile { display: flex; }
   }
 </style>
