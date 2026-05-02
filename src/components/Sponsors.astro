@@ -32,12 +32,12 @@
     <!-- Secondary sponsors -->
     <div class="sponsors-row fade-in" style="transition-delay: 0.1s">
       <!-- UCB -->
-      <div class="sponsor-card">
+      <a href="https://www.ucb.edu.bo/" target="_blank" rel="noopener noreferrer" class="sponsor-card">
         <div class="sponsor-logo-wrap sponsor-logo-ucb">
           <img
-            src="/ucb-logo.png"
+            src="/ucb2.png"
             alt="Universidad Católica Boliviana"
-            width="160"
+            width="200"
             height="auto"
             loading="lazy"
             class="sponsor-img"
@@ -47,25 +47,25 @@
           <strong>Universidad Católica Boliviana</strong>
           <span>Sede del evento · La Paz, Bolivia</span>
         </div>
-      </div>
+      </a>
 
       <!-- IQ Seguridad -->
-      <div class="sponsor-card">
+      <a href="https://www.i-quattro.com/" target="_blank" rel="noopener noreferrer" class="sponsor-card">
         <div class="sponsor-logo-wrap sponsor-logo-iq">
           <img
             src="/iq-seguridad.jpeg"
-            alt="IQ Seguridad"
-            width="160"
+            alt="iQuatro"
+            width="200"
             height="auto"
             loading="lazy"
             class="sponsor-img"
           />
         </div>
         <div class="sponsor-info">
-          <strong>IQ Seguridad</strong>
+          <strong>iQuatro</strong>
           <span>Partner de ciberseguridad</span>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- Community badge -->
@@ -181,6 +181,7 @@
     gap: 1.5rem;
     text-align: center;
     transition: border-color 0.2s, transform 0.2s;
+    text-decoration: none;
   }
 
   .sponsor-card:hover {
@@ -189,24 +190,32 @@
   }
 
   .sponsor-logo-wrap {
-    height: 80px;
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
+    width: 100%;
+  }
+
+  .sponsor-logo-ucb {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
   }
 
   .sponsor-logo-ucb .sponsor-img {
-    max-height: 70px;
+    max-height: 130px;
     width: auto;
     object-fit: contain;
-    filter: brightness(1.1);
   }
 
   .sponsor-logo-iq .sponsor-img {
-    max-height: 65px;
+    max-height: 110px;
     width: auto;
     object-fit: contain;
+    border-radius: 8px;
   }
 
   .sponsor-info {
