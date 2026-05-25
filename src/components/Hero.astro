@@ -6,7 +6,7 @@
 
   <div class="hero-content">
     <div class="hero-logo-wrap">
-      <img src="/event-logo.png" alt="Sky-Hack CTF Logo" width="130" height="130" class="hero-logo" />
+      <img src="/skyhack-logo.png" alt="Sky-Hack CTF Logo" width="300" height="auto" class="hero-logo" />
     </div>
 
     <div class="hero-badge">
@@ -68,7 +68,7 @@
     <p class="timing-note">
       Registro: <strong>7:30 AM</strong>
       <span aria-hidden="true"> · </span>
-      Inicio: <strong>9:00 AM</strong>
+      Inicio: <strong>8:00 AM</strong>
       <span aria-hidden="true"> · </span>
       Puntualidad obligatoria
     </p>
@@ -114,8 +114,8 @@
   setInterval(drawMatrix, 45);
 
   // ── Countdown ────────────────────────────────────────────────────────────
-  // 9:00 AM Bolivia Standard Time (UTC-4) = 13:00 UTC
-  const TARGET = new Date('2026-05-29T13:00:00.000Z');
+  // 8:00 AM Bolivia Standard Time (UTC-4) = 12:00 UTC
+  const TARGET = new Date('2026-05-29T12:00:00.000Z');
 
   const pad = (n: number) => String(n).padStart(2, '0');
 
@@ -189,14 +189,16 @@
 
   .hero-logo-wrap {
     animation: float 3.5s ease-in-out infinite;
-    filter: drop-shadow(0 0 24px rgba(159,239,0,0.5));
+    filter: drop-shadow(0 0 30px rgba(159,239,0,0.45));
+    max-width: 320px;
+    width: 100%;
+    margin-bottom: 0.5rem;
   }
 
   .hero-logo {
-    border-radius: 50%;
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   @keyframes float {

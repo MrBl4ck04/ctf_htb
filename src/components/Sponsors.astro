@@ -49,6 +49,24 @@
         </div>
       </a>
 
+      <!-- BancoSol -->
+      <a href="https://www.bancosol.com.bo/" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+        <div class="sponsor-logo-wrap sponsor-logo-bancosol">
+          <img
+            src="/bancosol.png"
+            alt="BancoSol"
+            width="200"
+            height="auto"
+            loading="lazy"
+            class="sponsor-img"
+          />
+        </div>
+        <div class="sponsor-info">
+          <strong>BancoSol</strong>
+          <span>Auspiciador oficial</span>
+        </div>
+      </a>
+
       <!-- IQ Seguridad -->
       <a href="https://www.i-quattro.com/" target="_blank" rel="noopener noreferrer" class="sponsor-card">
         <div class="sponsor-logo-wrap sponsor-logo-iq">
@@ -165,7 +183,7 @@
   /* Secondary sponsors */
   .sponsors-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     margin-bottom: 2rem;
   }
@@ -198,16 +216,20 @@
     width: 100%;
   }
 
-  .sponsor-logo-ucb {
+  .sponsor-logo-ucb,
+  .sponsor-logo-bancosol {
     background: #ffffff;
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
   }
 
-  .sponsor-logo-ucb .sponsor-img {
-    max-height: 130px;
+  .sponsor-logo-ucb .sponsor-img,
+  .sponsor-logo-bancosol .sponsor-img {
+    max-height: 120px;
+    max-width: 100%;
     width: auto;
+    height: auto;
     object-fit: contain;
   }
 

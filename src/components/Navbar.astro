@@ -3,9 +3,9 @@
 <header class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="#inicio" class="nav-brand" aria-label="Sky-Hack CTF 2026 — inicio">
-      <img src="/htb-logo.png" alt="Hack The Box" height="32" width="auto" class="nav-htb-logo" />
+      <img src="/htb-logo.png" alt="Hack The Box" height="28" width="auto" class="nav-htb-logo" />
       <span class="nav-divider" aria-hidden="true"></span>
-      <span class="nav-event-name">Sky-Hack <span class="nav-year">2026</span></span>
+      <img src="/event-logo.png" alt="Comunidad HTB La Paz" height="28" width="28" class="nav-community-logo" />
     </a>
 
     <nav class="nav-links" aria-label="Navegación principal">
@@ -112,20 +112,23 @@
 
   .nav-divider {
     width: 1px;
-    height: 20px;
+    height: 24px;
     background: rgba(164, 177, 205, 0.25);
   }
 
-  .nav-event-name {
-    font-size: 0.95rem;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    color: var(--white);
-    text-transform: uppercase;
+  .nav-community-logo {
+    height: 38px;
+    width: 38px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1.5px solid rgba(159, 239, 0, 0.25);
+    box-shadow: 0 0 12px rgba(159, 239, 0, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease;
   }
 
-  .nav-year {
-    color: var(--green);
+  .nav-community-logo:hover {
+    transform: scale(1.05);
+    border-color: rgba(159, 239, 0, 0.6);
   }
 
   .nav-links {
