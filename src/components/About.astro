@@ -95,21 +95,14 @@
         <!-- Registration CTA anchor -->
         <div id="inscripcion" class="reg-card">
           <div class="reg-card-inner">
-            <div class="reg-status">
-              <span class="reg-dot" aria-hidden="true"></span>
-              <span>Inscripciones Abiertas</span>
+            <div class="reg-status closed">
+              <span class="reg-dot closed" aria-hidden="true"></span>
+              <span>Inscripciones Cerradas</span>
             </div>
-            <p class="reg-desc">Completa el formulario oficial para asegurar tu lugar. Cupos limitados.</p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSf5DlPlu3ZQhJww1PMFhlhtNKtp9QcEFW_nRuxP09HXurGkvA/viewform?usp=sharing&ouid=112639955920823757253"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="reg-btn"
-              aria-label="Formulario de inscripción"
-            >
-              FORMULARIO DE INSCRIPCIÓN
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <p class="reg-desc">El proceso de registro para Sky-Hack La Paz 2026 ha finalizado. ¡Muchas gracias a todos los que se registraron! Nos vemos en el evento.</p>
+            <div class="reg-btn closed">
+              REGISTRO CERRADO
+            </div>
           </div>
         </div>
       </div>
@@ -288,28 +281,18 @@
 
   .reg-card-inner { display: flex; flex-direction: column; gap: 1rem; }
 
-  .reg-status {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--green);
+  .reg-status.closed {
+    color: #ff4a4a;
   }
 
-  .reg-dot {
-    width: 7px;
-    height: 7px;
-    background: var(--green);
-    border-radius: 50%;
-    animation: pulse-dot 1.8s ease-in-out infinite;
+  .reg-dot.closed {
+    background: #ff4a4a;
+    animation: pulse-dot-red 1.8s ease-in-out infinite;
   }
 
-  @keyframes pulse-dot {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(159,239,0,0.5); }
-    50% { box-shadow: 0 0 0 5px rgba(159,239,0,0); }
+  @keyframes pulse-dot-red {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,74,74,0.5); }
+    50% { box-shadow: 0 0 0 5px rgba(255,74,74,0); }
   }
 
   .reg-desc { font-size: 0.88rem; color: var(--grey); line-height: 1.6; }
@@ -332,7 +315,21 @@
     align-self: flex-start;
   }
 
-  .reg-btn:hover {
+  .reg-btn.closed {
+    background: rgba(255,255,255,0.05);
+    color: var(--grey-dim);
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .reg-btn.closed:hover {
+    background: rgba(255,255,255,0.05);
+    box-shadow: none;
+    transform: none;
+  }
+
+  .reg-btn:not(.closed):hover {
     background: #b8ff1a;
     box-shadow: 0 0 35px rgba(159,239,0,0.6);
     transform: translateY(-2px);
